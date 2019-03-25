@@ -1,0 +1,33 @@
+$grid__bp-sm: 576px;
+$grid__bp-md: 768px;
+$grid__bp-lg: 1200px;
+
+$grid__cols: 12;
+
+$map-grid-props: (
+  "sm": $grid__bp-sm,
+  "md": $grid__bp-md,
+  "lg": $grid__bp-lg
+);
+
+//create media query
+@mixin create-mq($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+//create grid for all resolutions
+@mixin create-col-classes($size, $grid-cols, $width) {
+  @include create-mq($width) {
+    @for $i from 1 through $grid-cols {
+      .col-#{$size}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i)) * 1%;
+      }
+    }
+  }
+}
+//call mixin
+@each $size, $width in $map-grid-props {
+  @include create-col-classes($size, $grid__cols, $width);
+}
