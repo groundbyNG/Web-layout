@@ -1,16 +1,6 @@
 @import "./normalize.scss";
 @import "./grid.scss";
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-div.red {
-  border: 1px solid red;
-}
-
-div.black {
-  border: 1px solid black;
-}
+@import "./themes.scss";
+@import "./header.scss";
+@import "./index.scss";
+@import "./footer.scss";

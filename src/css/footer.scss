@@ -1,0 +1,40 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, $light-blue, $blue, $dark-blue);
+  padding: 15px;
+}
+
+.footer__container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.container-logo__logo {
+  width: 90px;
+  height: 18px;
+}
+
+.pages-block {
+  display: flex;
+}
+
+.pages-block__link {
+  display: flex;
+  justify-content: center;
+}
+
+.social {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social__link {
+  margin: 0 15px;
+
+  &:hover {
+    color: $light-blue;
+  }
+}
