@@ -4,3 +4,17 @@
 @import "./header.scss";
 @import "./index.scss";
 @import "./footer.scss";
+@import "./about-us.scss";
+@import "./contacts.scss";
+
+.display-container {
+  box-sizing: border-box;
+  overflow: auto;
+  height: calc(100vh - 114px);
+  padding: 30px;
+}
+
+.logo {
+  width: 90px;
+  height: 18px;
+}

@@ -1,0 +1,20 @@
+.c-about {
+  padding: 20px;
+
+  &__title {
+    text-decoration: underline;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__image-container {
+    text-align: center;
+  }
+
+  &__image {
+    border-radius: 10px;
+    height: auto;
+  }
+}

@@ -2,7 +2,7 @@
 <html>
   <head lang="ru">
     <meta charset="UTF-8" />
-    <title>Main page</title>
+    <title>Contacts</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -11,6 +11,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
@@ -22,27 +33,21 @@
         <a href="#" class="right-block__link">Bucket</a>
       </div>
     </header>
-    <div class="display-container main-content">
-      <div class="shade">
-        <div class="main-content__title-container">
-          <h1 class="title-container__title">
-            Revolutionary innovation in the auto industry
-          </h1>
-        </div>
-        <div class="main-content__links-container">
-          <div class="links-container__link-container col-lg-4">
-            <a href="./contacts.html" class="link-container__link">Contacts</a>
-          </div>
-          <div class="links-container__link-container col-lg-4">
-            <a href="./about-us.html" class="link-container__link">About us</a>
-          </div>
-          <div class="links-container__link-container col-lg-4">
-            <a href="#" class="link-container__link">Choose a car...</a>
-          </div>
+    <div class="display-container">
+      <div class="c-about">
+        <h1 class="c-about__title">
+          Contacts
+        </h1>
+        <ul>
+          <li><b>email:</b> admin@admin.com</li>
+          <li><b>phone number:</b> +37529123456</li>
+          <li><b>address:</b> Belarus, Vitebsk</li>
+        </ul>
+        <div class="c-about__image-container">
+          <div id="map"></div>
         </div>
       </div>
     </div>
-
     <footer>
       <div class="footer__container-logo col-lg-4">
         <img src="../img/logo.png" alt="logo" class="logo" />
@@ -62,5 +67,6 @@
         ></a>
       </div>
     </footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>

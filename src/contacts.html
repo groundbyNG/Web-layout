@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ru">
+    <meta charset="UTF-8" />
+    <title>Contacts</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    //= template/header.html
+    <div class="display-container">
+      <div class="c-about">
+        <h1 class="c-about__title">
+          Contacts
+        </h1>
+        <ul>
+          <li><b>email:</b> admin@admin.com</li>
+          <li><b>phone number:</b> +37529123456</li>
+          <li><b>address:</b> Belarus, Vitebsk</li>
+        </ul>
+        <div class="c-about__image-container">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+    //= template/footer.html
+    <script src="./js/main.js"></script>
+  </body>
+</html>
