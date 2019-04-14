@@ -61,3 +61,28 @@
   color: black;
   border-radius: 3px;
 }
+
+@media only screen and (max-width: $grid__bp-lg) {
+  .title-container__title {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: $grid__bp-sm) and (min-width: 0) {
+  .title-container__title {
+    width: 80%;
+  }
+
+  .link-container__link {
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    width: auto;
+    margin: 0 2px;
+  }
+
+  .main-content__links-container {
+    justify-content: space-between;
+  }
+}

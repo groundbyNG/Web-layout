@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ru">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  maximum-scale=1.0" />
+    <title>Product page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    //= template/header.html
+    <div class="display-container products-content">
+      <div class="col-lg-6">
+        <div>
+          <div class="col-lg-6">
+            <img src="./img/car1.jpg" alt="car" />
+          </div>
+          <div class="col-lg-6">
+            <img src="./img/car2.jpg" alt="car" />
+          </div>
+        </div>
+        <div>
+          <div class="col-lg-6">
+            <img src="./img/car3.jpg" alt="car" />
+          </div>
+          <div class="col-lg-6">
+            <img src="./img/car4.jpg" alt="car" />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6"></div>
+    </div>
+    //= template/footer.html
+
+    <div id="loginModal" style="display:none">
+      <form>
+        <h2>
+          <b>Log in</b>
+        </h2>
+        <p>
+          <input
+            class="modal__field"
+            type="email"
+            name="email"
+            placeholder="Email..."
+          />
+          <input
+            class="modal__field"
+            type="password"
+            name="password"
+            placeholder="Password..."
+          />
+        </p>
+        <p><input type="submit" class="modal__submit-btn" value="Sign in" /></p>
+      </form>
+    </div>
+    <div class="modal">
+      <div class="modal-inner">
+        <a data-modal-close>Close</a>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

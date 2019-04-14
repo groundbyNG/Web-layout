@@ -3,22 +3,11 @@
   <head lang="ru">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,  maximum-scale=1.0" />
-    <title>Contacts</title>
+    <title>Product page</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-      crossorigin=""
-    ></script>
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
@@ -46,20 +35,26 @@
         </div>
       </div>
     </header>
-    <div class="display-container">
-      <div class="c-about">
-        <h1 class="c-about__title">
-          Contacts
-        </h1>
-        <ul>
-          <li><b>email:</b> admin@admin.com</li>
-          <li><b>phone number:</b> +37529123456</li>
-          <li><b>address:</b> Belarus, Vitebsk</li>
-        </ul>
-        <div class="c-about__image-container">
-          <div id="map"></div>
+    <div class="display-container products-content">
+      <div class="col-lg-6">
+        <div>
+          <div class="col-lg-6">
+            <img src="./img/car1.jpg" alt="car" />
+          </div>
+          <div class="col-lg-6">
+            <img src="./img/car2.jpg" alt="car" />
+          </div>
+        </div>
+        <div>
+          <div class="col-lg-6">
+            <img src="./img/car3.jpg" alt="car" />
+          </div>
+          <div class="col-lg-6">
+            <img src="./img/car4.jpg" alt="car" />
+          </div>
         </div>
       </div>
+      <div class="col-lg-6"></div>
     </div>
     <footer>
       <a class="footer__link" href="./index.html">
@@ -88,38 +83,34 @@
       </div>
     </footer>
 
-    <div>
-      <div id="loginModal" style="display:none">
-        <form>
-          <h2>
-            <b>Log in</b>
-          </h2>
-          <p>
-            <input
-              class="modal__field"
-              type="email"
-              name="email"
-              placeholder="Email..."
-            />
-            <input
-              class="modal__field"
-              type="password"
-              name="password"
-              placeholder="Password..."
-            />
-          </p>
-          <p><input type="submit" class="modal__submit-btn" value="Sign in" /></p>
-        </form>
+    <div id="loginModal" style="display:none">
+      <form>
+        <h2>
+          <b>Log in</b>
+        </h2>
+        <p>
+          <input
+            class="modal__field"
+            type="email"
+            name="email"
+            placeholder="Email..."
+          />
+          <input
+            class="modal__field"
+            type="password"
+            name="password"
+            placeholder="Password..."
+          />
+        </p>
+        <p><input type="submit" class="modal__submit-btn" value="Sign in" /></p>
+      </form>
+    </div>
+    <div class="modal">
+      <div class="modal-inner">
+        <a data-modal-close>Close</a>
+        <div class="modal-content"></div>
       </div>
     </div>
-    <div>
-      <div class="modal">
-        <div class="modal-inner">
-          <i data-modal-close class="ion-md-close"></i>
-          <div class="modal-content"></div>
-        </div>
-      </div>
-    </div>
-    <script src="./js/contacts.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

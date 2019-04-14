@@ -1,3 +1,5 @@
+//= ../../../node_modules/leaflet/dist/leaflet.js
+
 var map;
 var ajaxRequest;
 var plotlist;

@@ -12,8 +12,14 @@ $map-grid-props: (
 
 //create media query
 @mixin create-mq($width) {
-  @media screen and (min-width: $width) {
-    @content;
+  @if $width == 576px {
+    @media screen and (min-width: 0) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
   }
 }
 
@@ -30,4 +36,18 @@ $map-grid-props: (
 //call mixin
 @each $size, $width in $map-grid-props {
   @include create-col-classes($size, $grid__cols, $width);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
 }

@@ -1,0 +1,9 @@
+@import "../../node_modules/nouislider/distribute/nouislider.min";
+
+.range {
+  margin: 0 25px;
+  text-align: center;
+  & #slider {
+    margin-bottom: 10px;
+  }
+}

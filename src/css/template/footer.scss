@@ -6,13 +6,14 @@ footer {
   padding: 15px;
 }
 
-.footer__container-logo {
+.footer__link {
   display: flex;
   align-items: center;
 }
 
 .pages-block {
   display: flex;
+  justify-content: center;
 }
 
 .pages-block__link {
@@ -31,5 +32,23 @@ footer {
 
   &:hover {
     color: $light-blue;
+  }
+}
+
+@media screen and (max-width: $grid__bp-sm) and (min-width: 0) {
+  .social {
+    font-size: 1em;
+  }
+
+  .pages-block {
+    justify-content: space-around;
+  }
+
+  .pages-block__link {
+    font-size: 0.9em;
+  }
+
+  .social__link {
+    margin: 0 10px;
   }
 }

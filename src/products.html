@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ru">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  maximum-scale=1.0" />
+    <title>Products page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    //= template/header.html
+    <div class="products-content row">
+      <button class="accordion col-sm-12">
+        Show filters
+      </button>
+      <div class="sidebar col-sm-12 col-md-12 col-lg-2">
+        <form action="#">
+          <div class="search-block col-lg-12">
+            <input type="search" name="find" placeholder="Type car name" />
+          </div>
+          <h3 class="headline">Categories</h3>
+          <div class="sidebar__categories">
+            <ul>
+              <li>
+                <label class="container"
+                  >Sedan
+                  <input type="checkbox" name="sedan" id="sedan" />
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container"
+                  >Uni
+                  <input type="checkbox" name="uni" id="uni" />
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container"
+                  >Hatchback
+                  <input type="checkbox" name="hatchback" id="hatchback" />
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container"
+                  >Coupe
+                  <input type="checkbox" name="coupe" id="coupe" />
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="headline">Year</h3>
+            <div class="range">
+              <div id="slider"></div>
+              <span id="slider-value"></span>
+              <input name="range" id="slider-output" type="hidden" />
+            </div>
+          </div>
+          <div class="sidebar__submit col-lg-12">
+            <button type="submit">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="sidebar-content col-sm-12 col-md-12 col-lg-10">
+        <div class="display-container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="sidebar-content__elem">
+                <a href="#">
+                  <div class="sidebar-content__border">
+                    <img src="./img/car1.jpg" alt="car" />
+                    <p>Mazda MX-5</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="sidebar-content__elem">
+                <a href="#">
+                  <div class="sidebar-content__border">
+                    <img src="./img/main-car2.jpg" alt="car" />
+                    <p>Mazda 6</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="sidebar-content__elem">
+                <a href="#">
+                  <div class="sidebar-content__border">
+                    <img src="./img/main-car3.jpg" alt="car" />
+                    <p>Mazda CX-5</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="sidebar-content__elem">
+                <a href="#">
+                  <div class="sidebar-content__border">
+                    <img src="./img/car1.jpg" alt="car" />
+                    <p>Mazda MX-5</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="sidebar-content__elem">
+                <a href="#">
+                  <div class="sidebar-content__border">
+                    <img src="./img/main-car2.jpg" alt="car" />
+                    <p>Mazda 6</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="sidebar-content__elem">
+                <a href="#">
+                  <div class="sidebar-content__border">
+                    <img src="./img/main-car3.jpg" alt="car" />
+                    <p>Mazda CX-5</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="pagination">
+              <a class="pagination__link" href="#">&laquo;</a>
+              <a class="pagination__link pagination__link-active" href="#">1</a>
+              <a class="pagination__link" href="#">2</a>
+              <a class="pagination__link" href="#">3</a>
+              <a class="pagination__link" href="#">4</a>
+              <a class="pagination__link" href="#">5</a>
+              <a class="pagination__link" href="#">6</a>
+              <a class="pagination__link" href="#">&raquo;</a>
+            </div>
+          </div>
+        </div>
+        //= template/footer.html
+      </div>
+    </div>
+    <div>
+      //= template/modal.html
+    </div>
+    <div>
+      //= template/login-modal.html
+    </div>
+    <script src="./js/products.js"></script>
+  </body>
+</html>

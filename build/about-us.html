@@ -2,24 +2,37 @@
 <html>
   <head lang="ru">
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  maximum-scale=1.0" />
     <title>About us</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
-    <header>
-      <img src="../img/logo.png" alt="logo" class="logo" />
-      <div class="right-block">
-        <a href="#" class="right-block__link">Login</a>
-        <a href="#" class="right-block__link">Registration</a>
-        <a href="#" class="right-block__link">Bucket</a>
+    <header class="row">
+      <a class="header__link" href="./index.html">
+        <img src="../img/logo.png" alt="logo" class="logo" />
+      </a>
+      <div class="right-block col-sm-1 col-md-8 col-lg-5">
+        <div class="right-block__btn">
+          <i class="ion-md-menu"></i>
+        </div>
+        <div class="right-block__menu row">
+          <a
+            href="#loginModal"
+            data-modal-open
+            class="right-block__link col-sm-12 col-md-3 col-lg-1"
+            >Login</a
+          >
+          <a href="#" class="right-block__link col-sm-12 col-md-3 col-lg-1"
+            >Registration</a
+          >
+          <a href="#" class="right-block__link col-sm-12 col-md-3 col-lg-1"
+            >Bucket</a
+          >
+        </div>
       </div>
     </header>
     <div class="c-about">
@@ -49,15 +62,22 @@
       </div>
     </div>
     <footer>
-      <div class="footer__container-logo col-lg-4">
+      <a class="footer__link" href="./index.html">
         <img src="../img/logo.png" alt="logo" class="logo" />
+      </a>
+      <div class="pages-block col-lg-4 col-md-6 col-sm-6">
+        <a
+          href="./contacts.html"
+          class="pages-block__link col-lg-6 col-md-6 col-sm-6"
+          >Contacts</a
+        >
+        <a
+          href="./about-us.html"
+          class="pages-block__link col-lg-6 col-md-6 col-sm-6"
+          >About us</a
+        >
       </div>
-      <div class="pages-block col-lg-4">
-        <a href="./index.html" class="pages-block__link col-lg-4">Main</a>
-        <a href="./contacts.html" class="pages-block__link col-lg-4">Contacts</a>
-        <a href="./about-us.html" class="pages-block__link col-lg-4">About us</a>
-      </div>
-      <div class="social col-lg-4">
+      <div class="social">
         <a class="social__link" href="https://vk.com"><i class="fa fa-vk"></i></a>
         <a class="social__link" href="https://facebook.com"
           ><i class="fa fa-facebook"></i
@@ -67,5 +87,38 @@
         ></a>
       </div>
     </footer>
+    <div>
+      <div id="loginModal" style="display:none">
+        <form>
+          <h2>
+            <b>Log in</b>
+          </h2>
+          <p>
+            <input
+              class="modal__field"
+              type="email"
+              name="email"
+              placeholder="Email..."
+            />
+            <input
+              class="modal__field"
+              type="password"
+              name="password"
+              placeholder="Password..."
+            />
+          </p>
+          <p><input type="submit" class="modal__submit-btn" value="Sign in" /></p>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="modal">
+        <div class="modal-inner">
+          <i data-modal-close class="ion-md-close"></i>
+          <div class="modal-content"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/aboutUs.js"></script>
   </body>
 </html>

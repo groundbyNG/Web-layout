@@ -21,21 +21,24 @@ var path = {
     html: "build/",
     js: "build/js/",
     css: "build/css/",
-    img: "build/img/"
+    img: "build/img/",
+    fonts: "build/fonts/"
   },
   src: {
     //Пути откуда брать исходники
     html: "src/*.html", //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-    js: "src/js/main.js", //В стилях и скриптах нам понадобятся только main файлы
+    js: "src/js/*.js", //В стилях и скриптах нам понадобятся только main файлы
     style: "src/css/main.scss",
-    img: "src/img/**/*.*" //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    img: "src/img/**/*.*", //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    fonts: "./node_modules/ionicons/dist/fonts/*.*"
   },
   watch: {
     //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: "src/**/*.html",
     js: "src/js/**/*.js",
     style: "src/css/**/*.scss",
-    img: "src/img/**/*.*"
+    img: "src/img/**/*.*",
+    fonts: "src/fonts/**/*.*"
   },
   clean: "./build"
 };
@@ -96,15 +99,27 @@ gulp.task("image:build", function() {
     .pipe(gulp.dest(path.build.img)) //И бросим в build
     .pipe(reload({ stream: true }));
 });
+
+gulp.task("fonts:build", function() {
+  gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
+});
+
 gulp.task(
   "build",
-  gulp.series("html:build", "js:build", "style:build", "image:build")
+  gulp.series(
+    "html:build",
+    "js:build",
+    "style:build",
+    "image:build",
+    "fonts:build"
+  )
 );
 gulp.task("watch", function() {
   gulp.watch(path.watch.html, gulp.series("html:build"));
   gulp.watch(path.watch.style, gulp.series("style:build"));
   gulp.watch(path.watch.js, gulp.series("js:build"));
   gulp.watch(path.watch.img, gulp.series("image:build"));
+  gulp.watch(path.watch.fonts, gulp.series("fonts:build"));
 });
 
 gulp.task("webserver", function() {
