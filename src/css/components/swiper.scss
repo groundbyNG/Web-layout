@@ -1,0 +1,15 @@
+@import "../../../node_modules/swiper/dist/css/swiper";
+
+.swiper-container {
+  margin: 30px auto;
+  width: 600px;
+  height: 300px;
+  position: relative;
+}
+
+@media only screen and (max-width: $grid__bp-sm) {
+  .swiper-container {
+    width: 80vw;
+    height: auto;
+  }
+}
