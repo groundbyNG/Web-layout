@@ -1,7 +1,12 @@
 header {
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to right, $light-blue, $blue, $dark-blue);
+  background-image: linear-gradient(
+    to right,
+    var(--light),
+    var(--normal),
+    var(--dark)
+  );
   padding: 15px;
 }
 
@@ -40,9 +45,9 @@ header {
     padding: 10px;
     display: none;
     position: absolute;
-    bottom: -120px;
+    bottom: -160px;
     left: -100px;
-    background-color: $blue;
+    background-color: var(--normal);
     width: auto;
     border: 1px solid black;
     border-radius: 5px;

@@ -2,7 +2,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to right, $light-blue, $blue, $dark-blue);
+  background-image: linear-gradient(
+    to right,
+    var(--light),
+    var(--normal),
+    var(--dark)
+  );
   padding: 15px;
 }
 
@@ -31,7 +36,7 @@ footer {
   margin: 0 15px;
 
   &:hover {
-    color: $light-blue;
+    color: var(--light);
   }
 }
 

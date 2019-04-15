@@ -1,11 +1,13 @@
-$light-blue: rgb(26, 212, 250);
-$blue: rgb(34, 154, 233);
-$dark-blue: rgb(48, 133, 199);
-
-$light-red: #c03038;
-$red: #aa0d18;
+:root {
+  --light: rgb(26, 212, 250);
+  --normal: rgb(34, 154, 233);
+  --dark: rgb(48, 133, 199);
+}
 $dark-red: #7a1110;
+$red: #aa0d18;
 
-$light-theme: ();
-
-$dark-theme: ();
+:root[theme="dark"] {
+  --light: #c03038;
+  --normal: #aa0d18;
+  --dark: #7a1110;
+}
