@@ -26,15 +26,77 @@
             class="right-block__link col-sm-12 col-md-3 col-lg-1"
             >Login</a
           >
-          <a href="#" class="right-block__link col-sm-12 col-md-3 col-lg-1"
+          <a
+            href="#regisModal"
+            data-modal-open
+            class="right-block__link col-sm-12 col-md-3 col-lg-1"
             >Registration</a
           >
-          <a href="#" class="right-block__link col-sm-12 col-md-3 col-lg-1"
+          <a
+            href="./bucket.html"
+            class="right-block__link col-sm-12 col-md-3 col-lg-1"
             >Bucket</a
           >
         </div>
       </div>
     </header>
+    
+    <div>
+      <div id="loginModal" style="display:none">
+        <form>
+          <h2>
+            <b>Log in</b>
+          </h2>
+          <p>
+            <input
+              class="modal__field"
+              type="email"
+              name="email"
+              placeholder="Email..."
+            />
+            <input
+              class="modal__field"
+              type="password"
+              name="password"
+              placeholder="Password..."
+            />
+          </p>
+          <p><input type="submit" class="modal__submit-btn" value="Sign in" /></p>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="modal">
+        <div class="modal-inner">
+          <i data-modal-close class="ion-md-close"></i>
+          <div class="modal-content"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="regisModal" style="display:none">
+        <form>
+          <h2>
+            <b>Registration</b>
+          </h2>
+          <p>
+            <input
+              class="modal__field"
+              type="email"
+              name="email"
+              placeholder="Email..."
+            />
+            <input
+              class="modal__field"
+              type="password"
+              name="password"
+              placeholder="Password..."
+            />
+          </p>
+          <p><input type="submit" class="modal__submit-btn" value="Sign up" /></p>
+        </form>
+      </div>
+    </div>
     <div class="products-content row">
       <button class="accordion col-sm-12">
         Show filters
@@ -197,38 +259,6 @@
             ></a>
           </div>
         </footer>
-      </div>
-    </div>
-    <div>
-      <div class="modal">
-        <div class="modal-inner">
-          <i data-modal-close class="ion-md-close"></i>
-          <div class="modal-content"></div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div id="loginModal" style="display:none">
-        <form>
-          <h2>
-            <b>Log in</b>
-          </h2>
-          <p>
-            <input
-              class="modal__field"
-              type="email"
-              name="email"
-              placeholder="Email..."
-            />
-            <input
-              class="modal__field"
-              type="password"
-              name="password"
-              placeholder="Password..."
-            />
-          </p>
-          <p><input type="submit" class="modal__submit-btn" value="Sign in" /></p>
-        </form>
       </div>
     </div>
     <script src="./js/products.js"></script>

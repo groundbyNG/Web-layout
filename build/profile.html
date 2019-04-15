@@ -3,7 +3,7 @@
   <head lang="ru">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,  maximum-scale=1.0" />
-    <title>Main page</title>
+    <title>Profile page</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -97,32 +97,17 @@
         </form>
       </div>
     </div>
-    <div class="display-container main-content">
-      <div class="shade">
-        <div class="main-content__title-container">
-          <h1 class="title-container__title">
-            Revolutionary innovation in the auto industry
-          </h1>
-        </div>
-        <div class="main-content__links-container">
-          <div
-            class="links-container__link-container col-lg-4 col-md-4 col-sm-4"
-          >
-            <a href="./contacts.html" class="link-container__link">Contacts</a>
-          </div>
-          <div
-            class="links-container__link-container col-lg-4 col-md-4 col-sm-4"
-          >
-            <a href="./about-us.html" class="link-container__link">About us</a>
-          </div>
-          <div
-            class="links-container__link-container col-lg-4 col-md-4 col-sm-4"
-          >
-            <a href="./products.html" class="link-container__link"
-              >Choose a car...</a
-            >
-          </div>
-        </div>
+    <div class="display-container profile-content">
+      <h1>Profile</h1>
+
+      <div class="row">
+        <form class="col-lg-4 col-md-6 col-sm-12" action="#">
+          <label for="email">Email: </label>
+          <input name="email" id="email" type="email" />
+          <label for="password">Password: </label>
+          <input name="password" id="password" type="password" />
+          <button class="style-button">Save</button>
+        </form>
       </div>
     </div>
     <footer>
@@ -153,6 +138,7 @@
         ></a>
       </div>
     </footer>
-    <script src="./js/index.js"></script>
+
+    <script src="./js/product.js"></script>
   </body>
 </html>

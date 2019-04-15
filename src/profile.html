@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ru">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  maximum-scale=1.0" />
+    <title>Profile page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    //= template/header.html
+    <div class="display-container profile-content">
+      <h1>Profile</h1>
+
+      <div class="row">
+        <form class="col-lg-4 col-md-6 col-sm-12" action="#">
+          <label for="email">Email: </label>
+          <input name="email" id="email" type="email" />
+          <label for="password">Password: </label>
+          <input name="password" id="password" type="password" />
+          <button class="style-button">Save</button>
+        </form>
+      </div>
+    </div>
+    //= template/footer.html
+
+    <script src="./js/product.js"></script>
+  </body>
+</html>
